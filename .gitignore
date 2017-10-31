@@ -1,0 +1,14 @@
+*.class
+*.ear
+*.iml
+*.ipr
+*.iws
+*.jar
+*.log
+*.tmp
+*.war
+/.gradle/
+/.idea/
+build/
+out/
+
