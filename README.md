@@ -15,10 +15,21 @@ Difficult Level - Intermediate
 5) Keep test coverage 100%
 
 ## Objective:
-The problem that you would be solving, is to create a class of flasks: different shapes and sizes, and a container: 
-any shape and size. Assuming an unlimited supply of a liquid and the flask is auto-filled every time when it is 
-emptied, need to find the arrangement to fill the container with minimal iteration of flasks and the wastage (remaining
- in the last flask after the container is full), complying with certain constraints.
+The problem that you would be solving, is to create a class of <b><u>measuring flasks</u></b>: different shapes and 
+sizes, and a <b><u>container</u></b>: any shape and size. Assuming an unlimited supply of a liquid and the flask is 
+auto-filled every time when it is emptied, need to find the arrangement that would fill the container with 
+(1) minimal the wastage (remaining in the last flask after the container is full) and (2) minimal iteration of flasks.
+
+**Below is an example :-**
+
+Container: cylindrical, 110 oz <br>
+Flask(s) : (F1) cylindrical, 50 oz; (F2) cylindrical, 30 oz; (F3) rectangular, 20 oz. <br>
+
+Few of the possible combinations are: <br>
+[Scn#1] F1 X 3; F2 X 0; F3 X 0   => Wastage 40 oz <br>
+[Scn#2] F1 X 2; F2 X 0; F3 X 1   => Wastage 10 oz ***[optimal]*** <br>
+[Scn#3] F1 X 1; F2 X 1; F3 X 2   => Wastage 10 oz <br>
+[Scn#4] F1 X 0; F2 X 0; F3 X 6   => Wastage 10 oz <br>
 
 **NOTE: To make the calculations simple and focus on concepts, consider the dimensions to be positive integers only 
 and round-off the volume to the nearest (preferably, higher) integer value.**
@@ -61,16 +72,18 @@ and round-off the volume to the nearest (preferably, higher) integer value.**
 </code></pre>
 
 ## Step 3
-1) Create the “FillContainer” class
-2) This will accept a cylindrical container and a cylindrical flask.
+1) Create a method “fillContainer”, under the container.
+2) This will accept a cylindrical flask.
 3) Should be able to fill the container using the flask.
 4) Should return the no. of time the flask is used to fill the flask and the leftover in the flask after the container is full.
 
 <pre><code>
-   class FillContainer {
+   class CylindricalContainer {
+      ...
+      ...
 
       //fill the container using the flask, and
-      //return the wastage & no. of times the flask was used/re-filled
+      //return the wastage and no. of times the flask was used/re-filled
       *** fill() {}
 
    }
@@ -81,9 +94,8 @@ and round-off the volume to the nearest (preferably, higher) integer value.**
 2) Should be able to define them with appropriate geometric values (say, length, breadth & height for a rectangular flask; length of a side & height for a pentagonal or hexagonal flask).
 
 ## Step 5
-1) Refactor the “FillContainer” class to “SmartFill”
-2) Should be able to accept a container (any shape & size) and a collection of flasks (any shape & size), at least 1 flask.
+1) Refactor the “fillContainer” method to “smartFill”
+2) Should be able to accept a collection of flasks (any shape & size), at least 1 flask.
 3) No two flasks should be of same volume.
 4) The sum of volume of all flasks should not be more than 2/3 of the container.
 5) Try to keep the wastage of liquid and the usage of flasks to be minimal.
-
