@@ -26,10 +26,16 @@ Container: cylindrical, 110 oz <br>
 Flask(s) : (F1) cylindrical, 50 oz; (F2) cylindrical, 30 oz; (F3) rectangular, 20 oz. <br>
 
 Few of the possible combinations are: <br>
-[Scn#1] F1 X 3; F2 X 0; F3 X 0   => Wastage 40 oz <br>
-[Scn#2] F1 X 2; F2 X 0; F3 X 1   => Wastage 10 oz ***[optimal]*** <br>
-[Scn#3] F1 X 1; F2 X 1; F3 X 2   => Wastage 10 oz <br>
-[Scn#4] F1 X 0; F2 X 0; F3 X 6   => Wastage 10 oz <br>
+[Scn#1] F1 X 3; F2 X 0; F3 X 0   => Wastage 40 oz; 3 iterations <br>
+[Scn#2] F1 X 2; F2 X 0; F3 X 1   => Wastage 10 oz; 3 iterations ***[optimal]*** <br>
+[Scn#3] F1 X 1; F2 X 1; F3 X 2   => Wastage 10 oz; 4 iterations <br>
+[Scn#4] F1 X 0; F2 X 0; F3 X 6   => Wastage 10 oz; 6 iterations <br>
+
+<b><u>Hints:</u></b><br><br>
+Formulae to calculate the volume for few shapes that can be used:<br><br>
+CYLINDRICAL => pi * R<sup>2</sup> * H; where R is radius and H is height<br><br>
+RECTANGULAR => L * W * H; where L is length, W is width and H is height<br><br>
+HEXAGONAL => (3&radic;3 / 2) * A<sup>2</sup> * H; where A is length of a side and H is height
 
 **NOTE: To make the calculations simple and focus on concepts, consider the dimensions to be positive integers only 
 and round-off the volume to the nearest (preferably, higher) integer value.**
@@ -91,11 +97,14 @@ and round-off the volume to the nearest (preferably, higher) integer value.**
 
 ## Step 4
 1) At point, generalize flasks, containers and filler, so that you could use different shapes.
-2) Should be able to define them with appropriate geometric values (say, length, breadth & height for a rectangular flask; length of a side & height for a pentagonal or hexagonal flask).
+2) Should be able to define them with appropriate geometric values (say, length, breadth and height for a rectangular 
+flask; length of a side & height for a pentagonal or hexagonal flask).
 
 ## Step 5
 1) Refactor the “fillContainer” method to “smartFill”
-2) Should be able to accept a collection of flasks (any shape & size), at least 1 flask.
+2) Should be able to accept a collection of flasks (any shape and size), at least 1 flask.
 3) No two flasks should be of same volume.
 4) The sum of volume of all flasks should not be more than 2/3 of the container.
 5) Try to keep the wastage of liquid and the usage of flasks to be minimal.
+
+### Happy Coding!!!
