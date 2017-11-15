@@ -15,10 +15,11 @@ Difficult Level - Intermediate
 5) Keep test coverage 100%
 
 ## Objective:
-The problem that you would be solving, is to create a class of <b><u>measuring flasks</u></b>: different shapes and 
-sizes, and a <b><u>container</u></b>: any shape and size. Assuming an unlimited supply of a liquid and the flask is 
-auto-filled every time when it is emptied, need to find the arrangement that would fill the container with 
-(1) minimal the wastage (remaining in the last flask after the container is full) and (2) minimal iteration of flasks.
+In this kata, we would be creating a set of <b><u>measuring flasks</u></b>: different shapes and 
+sizes, and a <b><u>container</u></b>: any shape and size. The flasks would be used to fill the container. 
+Assuming an unlimited supply of a liquid and the flask is auto-filled every time when it is emptied, 
+we would need to find the no. of iteration taken by the flask(s) to fill the container, with 
+(1) minimum wastage (remaining in the last flask after the container is full) and (2) minimum iteration of flasks.
 
 **Below is an example :-**
 
@@ -42,7 +43,7 @@ and round-off the volume to the nearest (preferably, higher) integer value.**
 
 ## Step 1
 1) Create class for a cylindrical flask. Don’t worry about the different shapes.
-2) Should be able to define the flask of different dimensions (diameter and height).
+2) Should be able to define flask of different dimensions (diameter and height).
 3) The volume of the flask should be only in multiple of 10s.
 
 <pre><code>
@@ -56,7 +57,7 @@ and round-off the volume to the nearest (preferably, higher) integer value.**
 
 ## Step 2
 1) Create class for a cylindrical container. Don’t worry about the different shapes.
-2) Should be able to define the container of different dimensions (diameter and height).
+2) Should be able to define container of different dimensions (diameter and height).
 3) The volume of the container should be only in multiple of 10s.
 
 <pre><code>
@@ -90,7 +91,7 @@ and round-off the volume to the nearest (preferably, higher) integer value.**
 
       //fill the container using the flask, and
       //return the wastage and no. of times the flask was used/re-filled
-      *** fill() {}
+      *** fillContainer() {}
 
    }
 </code></pre>
