@@ -139,8 +139,8 @@ Then: no. of times the flask used = 2 and wastage = 0.
 <b>Scenario(s):</b><br><br>
 Given: CylindricalContainer(radius:6, height:3) {volume=340} <br> 
 And: CylindricalFlask(radius:1, height:19) {volume=60}, CubicalFlask(length:2, width:3, height:5) {volume=30} <br>
-When: smartFill() 
-Then: no. of times the flask used for CylindricalFlask as 8 and CubicalFlask as 1
+When: smartFill()  <br>
+Then: no. of times the flask used for CylindricalFlask as 8 and CubicalFlask as 1 <br>
 And: Wastage as 10<br>
 
 ### Happy Coding!!!
