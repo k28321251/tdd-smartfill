@@ -56,9 +56,9 @@ and round-off the volume to the nearest (preferably, higher) integer value.**
    }
 </code></pre>
 
-<b>Minimum test requirements:</b><br>
-1) CylindricalFlask(radius:6, height:3) - should <font color="green">Pass</font>, as the volume is 340. 
-2) CylindricalFlask(radius:3, height:10) - should <font color="red">Fail</font>, as the volume is 282.
+<b>Scenario(s):</b><br>
+1) CylindricalFlask(radius:6, height:3) - should pass as the volume is 340. 
+2) CylindricalFlask(radius:3, height:10) - should fail as the volume is 282.
 
 ## Stage 2
 <b>Goal:</b>
@@ -85,9 +85,9 @@ and round-off the volume to the nearest (preferably, higher) integer value.**
    }
 </code></pre>
 
-<b>Minimum test requirements:</b><br>
-1) CylindricalContainer(radius:6, height:3) - should <font color="green">Pass</font>, as the volume is 340. 
-2) CylindricalContainer(radius:3, height:10) - should <font color="red">Fail</font>, as the volume is 282.
+<b>Scenario(s):</b><br>
+1) CylindricalContainer(radius:6, height:3) - should pass as the volume is 340. 
+2) CylindricalContainer(radius:3, height:10) - should fail as the volume is 282.
 
 ## Stage 3
 <b>Goal:</b>
@@ -108,7 +108,7 @@ and round-off the volume to the nearest (preferably, higher) integer value.**
    }
 </code></pre>
 
-<b>Minimum test requirements:</b><br><br>
+<b>Scenario(s):</b><br><br>
 Given: CylindricalContainer(radius:6, height:3) {volume=340}, CylindricalFlask(radius:1, height:19) {volume=60} <br> 
 When: fillContainer() <br> 
 Then: no. of times the flask used = 9 and wastage = 20.   
@@ -119,7 +119,7 @@ Then: no. of times the flask used = 9 and wastage = 20.
 2) Should be able to define them with appropriate geometric values (say, length, breadth and height for a cubical 
 flask; length of a side & height for a pentagonal or hexagonal flask).
 
-<b>Minimum test requirements:</b><br><br>
+<b>Scenario(s):</b><br><br>
 Given: CylindricalContainer(radius:6, height:3) {volume=340}, CubicalFlask(length:2, width:6, height:5) {volume=60} <br>
 When: fillContainer() <br> 
 Then: no. of times the flask used as 9 and wastage as 20.<br><br>   
@@ -136,7 +136,7 @@ Then: no. of times the flask used = 2 and wastage = 0.
 4) The sum of volume of all flasks should not be more than 2/3 of the container.
 5) Try to keep the wastage of liquid and the usage of flasks to be minimal.
 
-<b>Minimum test requirements:</b><br><br>
+<b>Scenario(s):</b><br><br>
 Given: CylindricalContainer(radius:6, height:3) {volume=340} <br> 
 And: CylindricalFlask(radius:1, height:19) {volume=60}, CubicalFlask(length:2, width:3, height:5) {volume=30} <br>
 When: smartFill() 
